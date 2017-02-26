@@ -1,24 +1,10 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-% \usepackage[left=0.60in,top=0.4in,right=0.60in,bottom=0.4in]{geometry} % Document margins
-\usepackage[left=0.30in,top=0.3in,right=0.30in,bottom=0.3in]{geometry} % Document margins
-% \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -43,30 +29,29 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Skills}
-  \vspace {0.5em}
-  \begin{list}{$\cdot$}{\leftmargin=0em}
-    \itemsep -0.5em \vspace{-0.5em}
+  \vspace {0.3em}
+  \begin{list}{$\cdot$}{\leftmargin=0.5em}
+    \itemsep -0.3em \vspace{-0.3em}
     \item Experience in Go, C/C++, Python, Scheme/Racket using vim/tmux and Git
     \item Interested in security/cryptography, backend engineering and systems design
   \end{list}
-  \vspace{0.5em}
+  \vspace{0.3em}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
-
 \begin{rSection}{Projects}
   \begin{rSubsection}{mqueue}
 	  {\em {\href{http://github.com/ridwanmsharif/mqueue}
 		    {git.io/vMKXe}}}
 	  {}
 
-	  \item Constructed an in-memory message broker in Go
+    \item Constructed an in-memory message broker in Go
 			  over an HTTP API
-	  \item Designed a concurrent, thread-safe publisher/subscriber
+    \item Designed a concurrent, thread-safe publisher/subscriber
 		  architecture with multiple topics
-      \item Built an embeddable client library in Go to interface with the API
+    \item Built an embeddable client library in Go to interface with the API
         
   \end{rSubsection}
 
@@ -75,11 +60,11 @@
 		    {git.io/vMKPx}}}
 	  {}
 
-	  \item Built the RSA public-key cryptosystem in Python with a
+    \item Built the RSA public-key cryptosystem in Python with a
 			  command line client
-	  \item Implemented ciphertext generation and decryption routines using
+    \item Implemented ciphertext generation and decryption routines using
 		  generated public-private keypair
-	  \item Used highly performant exponentiation algorithms,
+    \item Used highly performant exponentiation algorithms,
 		  1000\texttt{+} unique page views
   \end{rSubsection}
 
@@ -88,9 +73,9 @@
 		    {git.io/vyfVt}}}
 	  {}
 
-	  \item Built a Scheme/LISP interpreter in Python with interactive command line environment
-	  \item Implemented tokeniziation, parsing, abstract syntax trees and evaluating of valid scheme code
-	  \item Complete with valid scheme interpretation of data structures, error handling and lambda calculus
+    \item Built a Scheme/LISP interpreter in Python with interactive command line environment
+    \item Implemented tokeniziation, parsing, abstract syntax trees and evaluating of valid scheme code
+    \item Complete with valid scheme interpretation of data structures, error handling and lambda calculus
   \end{rSubsection}
 
   \begin{rSubsection}{fzysearch}
@@ -98,9 +83,9 @@
 		    {git.io/vKyww}}}
 	  {}
 
-	 \item Published a fuzzy-string matching pip module/library in
+    \item Published a fuzzy-string matching pip module/library in
 		 Python for approximated query matches
-	\item Used Levenshtein's edit distance algorithm and average
+    \item Used Levenshtein's edit distance algorithm and average
 		weighted distance for ordering results
   \end{rSubsection}
   
@@ -109,9 +94,9 @@
 		    {git.io/vMKXJ}}}
 	  {}
 
-	\item Published a command utility for fast directory navigation using
+    \item Published a command utility for fast directory navigation using
 		previously visited locations
-	\item Used fzysearch to prune through search space and identify closest
+    \item Used fzysearch to prune through search space and identify closest
 		matching result
   \end{rSubsection}
 \end{rSection}
@@ -125,9 +110,9 @@
 		     {2016 -- 2021 \em (expected)}
 		     {Bachelors of Computer Science, Honours}
 		     {}
-	\item Hack the North (Volunteer), UW Robotics Club,
+    \item Hack the North (Volunteer), UW Robotics Club,
 		President's Scholarship ($95^{th}$ percentile)
-	\item Selected Courses: Algorithm Design, Functional Programming
+    \item Selected Courses: Algorithm Design, Functional Programming
   \end{rSubsection}
 \end{rSection} 
 
@@ -139,7 +124,7 @@
 \begin{rSection}{Activities and Volunteering}
   \begin{rSubsection}{Volunteer in UAE}
                      {\em Dubai, UAE}
-                     {Bronze Volunteer}
+                     {}
                      {}
     \item Volunteered at the Summit Silence, Pink Walkathon, Pink Book Sale, Nike
 	    Run, Operation Ozone, Helping Hands, Blood Drives and Ocean Cleanup
@@ -147,20 +132,20 @@
 
   \begin{rSubsection}{HP Electronics}
                      {\em Dubai, UAE}
-                     {Sales Representative}
                      {}
-	     \item Sold 450\texttt{+} laptops and 250\texttt{+} printers at
+                     {}
+    \item Sold 450\texttt{+} laptops and 250\texttt{+} printers at
 		     Gitex (Gulf information technology exhibition)
   \end{rSubsection}
 
   \begin{rSubsection}{St. Mary's Catholic High School}
                      {\em Dubai, UAE}
-                     {Head-Boy, House Captain, Senior Prefect}
+                     {}
                      {}
  
-  \item Elected Head-Boy, House-Captain and Senior Member of solidarity
+    \item Elected Head-Boy, House-Captain, Senior Prefect and Senior Member of solidarity
 	  group
-  \item Designed school yearbook and prom invites, organised charity
+    \item Designed school yearbook and prom invites, organised charity
 	  events
 	  
   \end{rSubsection}
