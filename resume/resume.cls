@@ -98,6 +98,14 @@
   \end{list}
 }
 
+\newenvironment{rMinisection}[0]{
+  \begin{list}{}{\leftmargin=0.0em}
+  \itemsep -0.5em \vspace{-0.0em}
+}{
+  \end{list}
+  \vspace{0.5em}
+}
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
