@@ -32,8 +32,9 @@
   \vspace {0.3em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
     \itemsep -0.3em \vspace{-0.3em}
-    \item Experience in Go, C/C++, Python, Scheme/Racket using vim/tmux and Git
-    \item Interested in security/cryptography, backend engineering and systems design
+    \item Proficient in Go, C/C++, Python, Bash, Scheme/Racket using vim/tmux and Git 
+    \item Familiarity with application security, systems design, cryptography
+      and backend engineering
   \end{list}
   \vspace{0.3em}
 \end{rSection}
@@ -44,11 +45,19 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
-  \begin{rSubsection}{NCR Corporation Ltd}
-		     {May - Sept, 2017}
-		     {System Software Engineering Intern}
-		     {}
-    \item Add details about the iNCRredible work term you've had
+  \begin{rSubsection}{NCR Corporation}
+		     {May -- Aug, 2017}
+		     {Infrastructure}
+		     {Waterloo, ON}
+    \item Developed and deployed a password vault to manage private credentials
+      for multiple teams. Designed to be compliant with NIST standards saving
+      approximately 18,000 USD annually
+    \item Built every component of the LDAP aware Password Vault - from implementing security layers 
+      (End-to-end encryption, SSL, RSA-2048, SHA-256) atop the database to developing the GUI, CLI and
+      Web clients for the vault that currently services approximately 155 users.
+    \item Shouldered operational role with cluster maintenance, ACL management,
+      audit trails, malware protection (WannaCry) \& several SOS tickets. Closely worked with VRA \&
+      VMware technologies
   \end{rSubsection}
 \end{rSection} 
 
@@ -58,19 +67,19 @@
 \begin{rSection}{Projects}
   
   \begin{rSubsection}{raft}
-	  {\em {\href{http://github.com/ridwanmsharif/mqueue}
-		    {TBD}}}
+	  {\em {\href{http://github.com/ridwanmsharif/raft}
+		    {git.io/v59cj}}}
 	  {}
-    \item This should be fun. Implementation of the raft consensus algorithm that ensures high availability, fault tolerance and much more.
-  \end{rSubsection}
-
-  \begin{rSubsection}{sws password vault}
-	  {\em {\href{http://github.com/ridwanmsharif/mqueue}
-		    {NCR Ltd.}}}
-	  {}
-
-    \item Vault details here
-        
+    \item Built a key-value store implementing Raft, a distributed consensus
+      protocol for managing replicated state machines over unreliable
+      networks
+    \item Designed log truncations, replications, snapshots, leader elections
+      and used protocol buffers with gRPC for the underlying RPC subsystem
+    \item Implemented a fault tolerant \& performant alternative to Paxos, tolerant to
+      network partitions and node failures. Based on this  2014
+      \href{https://raft.github.io/raft.pdf}{\textbf{research paper}} by Diego
+      Ongaro et al.
+      
   \end{rSubsection}
 
   \begin{rSubsection}{mqueue}
@@ -78,25 +87,11 @@
 		    {git.io/vMKXe}}}
 	  {}
 
-    \item Constructed an in-memory message broker in Go
-			  over an HTTP API
-    \item Designed a concurrent, thread-safe publisher/subscriber
-		  architecture with multiple topics
+    \item Constructed an in-memory message broker in Go over an HTTP API
+    \item Designed a concurrent, thread-safe publisher/subscriber architecture
+      with multiple topics
     \item Built an embeddable client library in Go to interface with the API
         
-  \end{rSubsection}
-
-  \begin{rSubsection}{prsa}
-	  {\em {\href{http://github.com/ridwanmsharif/prsa}
-		    {git.io/vMKPx}}}
-	  {}
-
-    \item Built the RSA public-key cryptosystem in Python with a
-			  command line client
-    \item Implemented ciphertext generation and decryption routines using
-		  generated public-private keypair
-    \item Used highly performant exponentiation algorithms,
-		  1000\texttt{+} unique page views
   \end{rSubsection}
 
   \begin{rSubsection}{lispy}
@@ -104,22 +99,21 @@
 		    {git.io/vyfVt}}}
 	  {}
 
-    \item Built a Scheme/LISP interpreter in Python with interactive command line environment
-    \item Implemented tokeniziation, parsing, abstract syntax trees and evaluating of valid scheme code
-    \item Complete with valid scheme interpretation of data structures, error handling and lambda calculus
-  \end{rSubsection}
-  
-  \begin{rSubsection}{cache}
-	  {\em{ \href{http://github.com/ridwanmsharif/cache}
-		    {https://git.io/v5tmR}}}
-	  {}
-
-    \item Cache and gRPC details here.
+    \item Built a robust Scheme/LISP interpreter in Python with a command line
+      client
+    \item Implemented tokenization, parsing, abstract syntax trees, and
+      evaluation of valid scheme code
+    \item Complete with valid scheme interpretation of data structures, error
+      handling and lambda calculus
+        
   \end{rSubsection}
 
   \begin{rMinisection}
     \item {\em Other notable projects:}
       \href{https://github.com/ridwanmsharif/goworkerpool}{\textbf{goworkerpool}},
+      \href{https://github.com/ridwanmsharif/cache}{\textbf{cache}},
+      \href{https://github.com/ridwanmsharif/prsa}{\textbf{pRSA}},
+      \href{https://www.ncr.com}{\textbf{swspasswordvault}},
       \href{https://github.com/ridwanmsharif/fzysearch}{\textbf{fzysearch}},
       \href{https://github.com/ridwanmsharif/airport}{\textbf{airport}}
   \end{rMinisection}
@@ -134,45 +128,12 @@
 		     {2016 -- 2021 \em (expected)}
 		     {Bachelors of Computer Science, Honours}
 		     {}
-    \item Hack the North (Volunteer), UW Robotics Club,
-		President's Scholarship ($95^{th}$ percentile)
-    \item Selected Courses: Algorithm Design, Functional Programming
+    \item Hack the North (Volunteer), UW Robotics Club, President's Scholarship
+      ($95^{th}$ percentile)
+    \item Selected Courses: Algorithm Design, Functional Programming, Object
+      Oriented programming, Combinatronics \& Optimization, Logic \&
+      Computation, MIT OCW: Introduction to Algorithms
   \end{rSubsection}
 \end{rSection} 
 
-
-%----------------------------------------------------------------------------------------
-% VOLUNTEERING SECTION
-%----------------------------------------------------------------------------------------
-%
-%\begin{rSection}{Activities and Volunteering}
-%  \begin{rSubsection}{Volunteer in UAE}
-%                     {\em Dubai, UAE}
-%                     {}
-%                     {}
-%    \item Volunteered at the Summit Silence, Pink Walkathon, Pink Book Sale, Nike
-%	    Run, Operation Ozone, Helping Hands, Blood Drives and Ocean Cleanup
-%  \end{rSubsection}
-%
-%  \begin{rSubsection}{HP Electronics}
-%                     {\em Dubai, UAE}
-%                     {}
-%                     {}
-%    \item Sold 450\texttt{+} laptops and 250\texttt{+} printers at
-%		     Gitex (Gulf information technology exhibition)
-%  \end{rSubsection}
-%
-%  \begin{rSubsection}{St. Mary's Catholic High School}
-%                     {\em Dubai, UAE}
-%                     {}
-%                     {}
-% 
-%    \item Elected Head-Boy, House-Captain, Senior Prefect and Senior Member of solidarity
-%	  group
-%    \item Designed school yearbook and prom invites, organised charity
-%	  events
-%	  
-%  \end{rSubsection}
-%\end{rSection}
-%
 \end{document}
