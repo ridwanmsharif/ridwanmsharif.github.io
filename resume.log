@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.15)  19 AUG 2017 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  22 SEP 2017 00:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,20 +8,6 @@ LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 
 ! LaTeX Error: File `resume.cls' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cls)
-
-Enter file name: advf
-
-! LaTeX Error: File `advf.cls' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cls)
-
-Enter file name: af
-
-! LaTeX Error: File `af.cls' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: cls)
@@ -83,9 +69,9 @@ Set a paper type (e.g., `a4paper').
 
  
 Here is how much of TeX's memory you used:
- 522 strings out of 493029
- 7913 string characters out of 6136234
- 62432 words of memory out of 5000000
+ 520 strings out of 493029
+ 7907 string characters out of 6136234
+ 62423 words of memory out of 5000000
  4133 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
