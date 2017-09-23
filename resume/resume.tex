@@ -71,11 +71,11 @@
 	  {}
 
     \item Implemented Raft, a fault tolerant \& performant distributed
-      consensus algorithm resilient to network partitions and node failures.
+      consensus algorithm resilient to lossy networks, network partitions and node failures.
       Based implementation on Diego Ongaro's
       \href{https://raft.github.io/raft.pdf}{\underline{thesis paper}}
     \item Designed log truncations, replications, snapshots, and leader
-      elections to manage replicated state machines over lossy networks
+      elections to manage replicated states
     \item Used protocol buffers with gRPC for the underlying RPC subsystem,
       implemented entirely in Go
       
@@ -111,8 +111,8 @@
 		    {git.io/v5tmR}}}
 	  {}
 
-    \item Implemented a caching service storing binary blobs using gRPC, built to support multitenancy, 
-      client \& server interceptors, streams and dry run functionalities complete with TLS support. Please help.
+    \item Implemented a caching service storing binary blobs, built to support multitenancy,
+      client \& server interceptors, streaming RPCs and ACL control functionalities complete with TLS support. 
   \end{rSubsection}
   
   \begin{rMinisection}
@@ -133,7 +133,7 @@
 		     {Sept '16 -- Apr '21 \em (expected)}
 		     {Bachelors of Computer Science, Honours}
 		     {}
-    \item Hack the North (Volunteer), UW Robotics Club, President's Scholarship
+    \item Hack the North (2017, 2016), UW Robotics Club, President's Scholarship
       ($95^{th}$ percentile)
     \item Selected Courses: Algorithm Design, Functional Programming, Object
       Oriented Programming, Combinatronics \& Optimization, Logic \&
