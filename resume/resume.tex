@@ -28,9 +28,9 @@
   \vspace {0.3em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
     \itemsep -0.3em \vspace{-0.3em}
-    \item Proficient in Go, C, C++, SQL, Python, Scheme/Racket and Bash
-    \item Interested in application security, cryptography, systems design and
-      systems engineering
+    \item Proficient in Go, C, C++, Ruby, Rails, Python, SQL, Elixir, Scheme (Racket) and Bash
+    \item Interested in Production Engineering, Systems Design, Infrastructure
+      and application security 
   \end{list}
   \vspace{0.3em}
 \end{rSection}
@@ -41,13 +41,32 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
+  \begin{rSubsection}{Shopify Inc.}
+		     {Jan -- Apr '18}
+		     {Production Engineering}
+		     {Ottawa, ON}
+    \item Implemented ChatOps into our Incident Management Procedure as
+      part of Spy: the slack-bot portal for all operational automation tasks.
+      This involved a streamlined workflow from incident start to closing the
+      postmortem: fine grain chain of command, access control, levels of
+      escalation, paging mechanisms, external communication support, and finally
+      incident introspective tooling. 
+    \item Built port mortem tools into ServicesDB, involved tooling to define and
+      track Service Level Objective (SLOs) that measure metrics such as uptime,
+      throughput, error rate, etc that is needed to support Shopify Services
+    \item Built operational tools wrapping around GitHub, Pagerduty and other
+      third party services to improve developer productivity and improve culture
+      around code reviews
+    \item Worked with rails, react, redis, memcached. Open sourced patch to
+      LITA. Led design meetings, conducted code reviews and more 
+  \end{rSubsection}
+
   \begin{rSubsection}{NCR Corporation}
 		     {May -- Aug '17}
 		     {Infrastructure}
 		     {Waterloo, ON}
     \item Designed a NIST compliant password manager to manage private
       credentials for multiple teams
-    % , LDAP aware
     \item Implemented all components of the LDAP aware vault -- security
       protocols (end-to-end encryption, SSL, RSA-2048, SHA-256), the database
       storage layer, and the client interfaces (CLI, web, etc.)
@@ -106,17 +125,9 @@
       functions, and user defined data structures
   \end{rSubsection}
 
-  \begin{rSubsection}{gcache}
-	  {\em {\href{http://github.com/ridwanmsharif/cache}
-		    {git.io/v5tmR}}}
-	  {}
-
-    \item Implemented a caching service using grpc/grpc-go, built to support multitenancy,
-      client and server interceptors, streaming RPCs, and ACL control functionalities complete with TLS support
-  \end{rSubsection}
-  
   \begin{rMinisection}
     \item {\em Other notable projects:}
+      \href{https://github.com/ridwanmsharif/cache}{\textbf{gcahe}},
       \href{https://github.com/ridwanmsharif/goworkerpool}{\textbf{go-workerpool}},
       \href{https://github.com/ridwanmsharif/prsa}{\textbf{pRSA}},
       \href{https://github.com/ridwanmsharif/fzysearch}{\textbf{fzysearch}},
@@ -135,8 +146,9 @@
 		     {}
     \item Hack the North (2017, 2016), UW Robotics Club, President's Scholarship
       ($95^{th}$ percentile)
-    \item Selected Courses: Algorithm Design, Functional Programming, Object
-      Oriented Programming, Combinatronics and Optimization, Logic and
+    \item Selected Courses: Data Structures, Sequential Programs, Computer
+      organisation and design, Algorithm Design, Functional Programming, Object
+      Oriented Programming, Combinatorics and Optimization, Logic and
       Computation
   \end{rSubsection}
 \end{rSection} 
