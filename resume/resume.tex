@@ -28,9 +28,10 @@
   \vspace {0.3em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
     \itemsep -0.3em \vspace{-0.3em}
-    \item Proficient in Go, C, C++, Ruby, Rails, Python, SQL, Elixir, Scheme (Racket) and Bash
-    \item Interested in Production Engineering, Systems Design, Infrastructure
-      and application security 
+    \item Experienced with Go, C, C++, Ruby, Rails, Python, SQL, Elixir, Docker, Redis,
+      Memcached
+    \item Interested in Microservices, Distributed Systems, Systems Design, Infrastructure
+      and Security 
   \end{list}
   \vspace{0.3em}
 \end{rSection}
@@ -45,20 +46,20 @@
 		     {Jan -- Apr '18}
 		     {Production Engineering}
 		     {Ottawa, ON}
-    \item Implemented ChatOps into our Incident Management Procedure as
-      part of Spy: the slack-bot portal for all operational automation tasks.
-      This involved a streamlined workflow from incident start to closing the
-      postmortem: fine grain chain of command, access control, levels of
-      escalation, paging mechanisms, external communication support, and finally
-      incident introspective tooling. 
-    \item Built port mortem tools into ServicesDB, involved tooling to define and
-      track Service Level Objective (SLOs) that measure metrics such as uptime,
-      throughput, error rate, etc that is needed to support Shopify Services
-    \item Built operational tools wrapping around GitHub, Pagerduty and other
-      third party services to improve developer productivity and improve culture
-      around code reviews
-    \item Worked with rails, react, redis, memcached. Open sourced patch to
-      LITA. Led design meetings, conducted code reviews and more 
+    \item Implemented an Ops portal streamlining the workflow from
+      failure detection to closing the postmortem
+    \item Designed incident response tooling to guarantee a clear chain of command,
+      distinct levels of escalation, automated record storage, a command portal,
+      external communication support, and
+      incident introspective tooling -- Featured in SREcon, subject of one of Shopify's 
+      \href{https://engineering.shopify.com/blogs/engineering/implementing-chatops-into-our-incident-management-procedure}
+      {\underline{engineering blog posts}}
+    \item Led multiple product design reviews outlining detailed plans of
+      implementing an improved Incident Management architecture. Went on
+      to deploy v1 into production for the On-Call teams at Shopify
+    \item Built cluster and service health tools improving observability
+      across all Shopify services: involved tooling to define and
+      track SLOs by measuring metrics such as uptime, throughput and error rates
   \end{rSubsection}
 
   \begin{rSubsection}{NCR Corporation}
@@ -67,15 +68,14 @@
 		     {Waterloo, ON}
     \item Designed a NIST compliant password manager to manage private
       credentials for multiple teams
-    \item Implemented all components of the LDAP aware vault -- security
-      protocols (end-to-end encryption, SSL, RSA-2048, SHA-256), the database
-      storage layer, and the client interfaces (CLI, web, etc.)
+    \item Implemented all components of the vault: security
+      protocols, the storage layer, and the client portals.
     \item Saved {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}18,000 USD
       annually. Used throughout the infrastructure division, across multiple
       teams/offices
     \item Shouldered an operational role with cluster maintenance, ACL management,
-      audit trails, and malware protection (WannaCry). Closely worked with VRA
-      and VMware technologies
+      audit trails, and malware protection (WannaCry). Closely worked with
+      VRealize and VMware technologies
   \end{rSubsection}
 \end{rSection} 
 
@@ -90,8 +90,8 @@
 	  {}
 
     \item Implemented Raft, a fault tolerant and performant distributed
-      consensus algorithm resilient to lossy networks, network partitions and node failures.
-      Based implementation on Diego Ongaro's
+      consensus algorithm resilient to lossy networks, network partitions and
+      node failures: Based implementation on Diego Ongaro's
       \href{https://raft.github.io/raft.pdf}{\underline{thesis paper}}
     \item Designed log truncations, replications, snapshots, and leader
       elections to manage replicated states
@@ -108,8 +108,6 @@
     \item Constructed an in-memory Kafka-esque message broker in Go over an HTTP API
     \item Designed a concurrent, thread-safe publisher/subscriber architecture
       with multiple topics
-    \item Built an embeddable client library in Go to interface with the API
-        
   \end{rSubsection}
 
   \begin{rSubsection}{lispy}
@@ -119,15 +117,13 @@
 
     \item Built a robust Scheme/LISP interpreter in Python based on Peter
       Norvig's implementation
-    \item Implemented tokenization, parsing, and code validation using abstract
-      syntax tree construction
     \item Added facilities for lexical scoping, errors, abstract list
       functions, and user defined data structures
   \end{rSubsection}
 
   \begin{rMinisection}
     \item {\em Other notable projects:}
-      \href{https://github.com/ridwanmsharif/cache}{\textbf{gcahe}},
+      \href{https://github.com/ridwanmsharif/cache}{\textbf{gcache}},
       \href{https://github.com/ridwanmsharif/goworkerpool}{\textbf{go-workerpool}},
       \href{https://github.com/ridwanmsharif/prsa}{\textbf{pRSA}},
       \href{https://github.com/ridwanmsharif/fzysearch}{\textbf{fzysearch}},
@@ -146,10 +142,6 @@
 		     {}
     \item Hack the North (2017, 2016), UW Robotics Club, President's Scholarship
       ($95^{th}$ percentile)
-    \item Selected Courses: Data Structures, Sequential Programs, Computer
-      organisation and design, Algorithm Design, Functional Programming, Object
-      Oriented Programming, Combinatorics and Optimization, Logic and
-      Computation
   \end{rSubsection}
 \end{rSection} 
 
