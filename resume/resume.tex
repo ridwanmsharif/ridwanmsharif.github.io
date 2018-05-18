@@ -4,7 +4,7 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.4in,right=0.6in,bottom=0.5in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -30,8 +30,8 @@
     \itemsep -0.3em \vspace{-0.3em}
     \item Experienced with Go, C, C++, Ruby, Rails, Python, SQL, Elixir, Docker, Redis,
       Memcached
-    \item Interested in Microservices, Distributed Systems, Systems Design, Infrastructure
-      and Security 
+    \item Interested in databases, distributed systems, systems design, infrastructure
+      and security 
   \end{list}
   \vspace{0.3em}
 \end{rSection}
@@ -42,42 +42,52 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
-  \begin{rSubsection}{Shopify Inc.}
+  \begin{rSubsection}{Shopify, Inc.}
 		     {Jan -- Apr '18}
-		     {Production Engineering}
+		     {Production Engineering Intern (Infrastructure)}
 		     {Ottawa, ON}
-    \item Implemented an Ops portal streamlining the workflow from
-      failure detection to closing the postmortem
-    \item Designed incident response tooling to guarantee a clear chain of command,
-      distinct levels of escalation, automated record storage, a command portal,
-      external communication support, and
-      incident introspective tooling -- Featured in SREcon, subject of one of Shopify's 
+    \item Led multiple design reviews outlining measures to improve
+      observability standards across Shopify
+    \item Redesigned core components of Shopify's incident response system
+      to incorporate reporting mechanisms, introspection, and severity
+      escalations -- featured in SREcon and in Shopify's
       \href{https://engineering.shopify.com/blogs/engineering/implementing-chatops-into-our-incident-management-procedure}
-      {\underline{engineering blog posts}}
-    \item Led multiple product design reviews outlining detailed plans of
-      implementing an improved Incident Management architecture. Went on
-      to deploy v1 into production for the On-Call teams at Shopify
-    \item Built cluster and service health tools improving observability
-      across all Shopify services: involved tooling to define and
-      track SLOs by measuring metrics such as uptime, throughput and error rates
+      {\underline{engineering blog}}
+    \item Developed a streamlined workflow from error detection, failure
+      mitigation, to postmortem publication
+    \item Built cluster/service health protocols to add instrumentation across
+      all Shopify services, to define and track SLOs, and measure uptime,
+      throughput, and error rates
   \end{rSubsection}
 
   \begin{rSubsection}{NCR Corporation}
 		     {May -- Aug '17}
-		     {Infrastructure}
+		     {System Software Engineering Intern (Infrastructure)}
 		     {Waterloo, ON}
     \item Designed a NIST compliant password manager to manage private
       credentials for multiple teams
-    \item Implemented all components of the vault: security
-      protocols, the storage layer, and the client portals.
-    \item Saved {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}18,000 USD
-      annually. Used throughout the infrastructure division, across multiple
-      teams/offices
+    \item Used throughout the infrastructure division across multiple
+      teams, saving {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}18,000 USD
+      annually. 
     \item Shouldered an operational role with cluster maintenance, ACL management,
-      audit trails, and malware protection (WannaCry). Closely worked with
-      VRealize and VMware technologies
+      and malware protection
   \end{rSubsection}
 \end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Research}
+  \begin{rSubsection}{uWaterloo Database Systems Group}
+	  {May -- Aug '18}
+	  {Undergraduate Researcher}
+	  {Waterloo, ON}
+    \item Researching main-memory, "compiling" databases that use dynamic
+      code-generation techniques as part of its query execution model
+    \item Studying query optimization, code synthesis, and transaction
+      compilation with Prof. Grant Weddell
+  \end{rSubsection}
+\end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
@@ -91,7 +101,7 @@
 
     \item Implemented Raft, a fault tolerant and performant distributed
       consensus algorithm resilient to lossy networks, network partitions and
-      node failures: Based implementation on Diego Ongaro's
+      node failures -- based on Diego Ongaro's
       \href{https://raft.github.io/raft.pdf}{\underline{thesis paper}}
     \item Designed log truncations, replications, snapshots, and leader
       elections to manage replicated states
@@ -110,19 +120,9 @@
       with multiple topics
   \end{rSubsection}
 
-  \begin{rSubsection}{lispy}
-	  {\em {\href{http://github.com/ridwanmsharif/lispy}
-		    {git.io/vyfVt}}}
-	  {}
-
-    \item Built a robust Scheme/LISP interpreter in Python based on Peter
-      Norvig's implementation
-    \item Added facilities for lexical scoping, errors, abstract list
-      functions, and user defined data structures
-  \end{rSubsection}
-
   \begin{rMinisection}
     \item {\em Other notable projects:}
+      \href{https://github.com/ridwanmsharif/lispy}{\textbf{lispy}},
       \href{https://github.com/ridwanmsharif/cache}{\textbf{gcache}},
       \href{https://github.com/ridwanmsharif/goworkerpool}{\textbf{go-workerpool}},
       \href{https://github.com/ridwanmsharif/prsa}{\textbf{pRSA}},
@@ -140,7 +140,7 @@
 		     {Sept '16 -- Apr '21 \em (expected)}
 		     {Bachelors of Computer Science, Honours}
 		     {}
-    \item Hack the North (2017, 2016), UW Robotics Club, President's Scholarship
+    \item UW Robotics Club, Hack the North (2017, 2016), President's Scholarship
       ($95^{th}$ percentile)
   \end{rSubsection}
 \end{rSection} 
