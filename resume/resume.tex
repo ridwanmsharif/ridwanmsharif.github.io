@@ -51,10 +51,12 @@
     \item Improved overall read/write throughput
          \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{by over 50\%}}
          and reduced end-to-end latency \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{by over 40\%}}
-       \item Refactored CockroachDB's transaction model to support idempotent intra-transactional
-         requests
+       \item Refactored CockroachDB's transaction model to support \href{https://github.com/cockroachdb/cockroach/pull/32688}
+         {\underline{idempotent intra-transactional requests}}
+       \item Added ordering within transactions
+         \href{https://github.com/cockroachdb/cockroach/pull/33244}{\underline{introducing read/write semantics}} to solve the Halloween Problem
        \item Implemented workload generators to simulate different loads, distributions and request patterns
-       \item Authored an \href{https://github.com/cockroachdb/cockroach/pull/30426}{\underline{RFC}}
+       \item Authored a \href{https://github.com/cockroachdb/cockroach/pull/30426}{\underline{design document}}
          and \href{https://github.com/cockroachdb/cockroach/pull/30611}{\underline{improved infrastructure}} 
          for granular control over data partitions to service geo-distribution and data compliance guarantees.
   \end{rSubsection}
