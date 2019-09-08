@@ -4,11 +4,12 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.5in,right=0.6in,bottom=0.5in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
 \usepackage{graphicx}
+\usepackage{soul}
 
 \name{Ridwan Sharif} % Your name
 \address {
@@ -25,15 +26,15 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Skills}
-  \vspace {0.3em}
+  \vspace {0.2em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
-    \itemsep -0.3em \vspace{-0.3em}
+    \itemsep -0.5em \vspace{-0.3em}
     \item Experienced with Go, C, C++, Ruby, Python, Lisp; Rails, SQL, Docker, Redis,
       Memcached and gRPC
     \item Interested in distributed systems, databases, infrastructure,
       performance and systems design
   \end{list}
-  \vspace{0.3em}
+  \vspace{0.1em}
 \end{rSection}
 
 
@@ -43,22 +44,53 @@
 
 \begin{rSection}{Work Experience}
   \begin{rSubsection}{Cockroach Labs}
+    {May -- Aug '19}
+         {Backend Engineering Intern (SQL Optimizer)}
+         {New York, NY}
+       \item Worked on query compilation, transformation and
+         optimization of
+         \setul{4pt}{.4pt}
+         \href{https://github.com/cockroachdb/cockroach/pull/38285}{\ul{joins}},
+         \href{https://github.com/cockroachdb/cockroach/pull/38660}{\ul{limits}}, 
+         \href{https://github.com/cockroachdb/cockroach/pull/37616}{\ul{indexes}}, 
+         and more
+       \item Incorporated 
+         \href{https://github.com/cockroachdb/cockroach/pull/38452}{\underline{segmented
+             sort}}
+         and 
+         \href{https://github.com/cockroachdb/cockroach/pull/38285}{\underline{look-up
+             joins}} into the optimizer
+         to improve query performance
+       \item Implemented
+         \href{https://github.com/cockroachdb/cockroach/pull/39668}{\ul{index-skip-scans}}
+         to improve index scan performance by an order of magnitude
+       \item Expanded the Cockroach SQL suite to include multi-table mutations
+         and ordered aggregations
+       \item Added tranformations that plan 
+         \href{https://github.com/cockroachdb/cockroach/pull/38963}{\underline{partition look-ups}}
+         over table scans by leveraging check constraints
+  \end{rSubsection}
+
+  \begin{rSubsection}{Cockroach Labs}
     {Sep -- Dec '18}
          {Backend Engineering Intern (Storage/Performance)}
          {New York, NY}
-       \item \href{https://github.com/cockroachdb/cockroach/pull/31413}
-      {\underline{Designed and implemented}} load based partitioning, replication and distribution of data across nodes
-    \item Improved overall read/write throughput
-         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{by over 50\%}}
-         and reduced end-to-end latency \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{by over 40\%}}
-       \item Refactored CockroachDB's transaction model to support \href{https://github.com/cockroachdb/cockroach/pull/32688}
-         {\underline{idempotent intra-transactional requests}}
-       \item Added ordering within transactions
-         \href{https://github.com/cockroachdb/cockroach/pull/33244}{\underline{introducing read/write semantics}} to solve the Halloween Problem
-       \item Implemented workload generators to simulate different loads, distributions and request patterns
-       \item Authored a \href{https://github.com/cockroachdb/cockroach/pull/30426}{\underline{design document}}
-         and \href{https://github.com/cockroachdb/cockroach/pull/30611}{\underline{improved infrastructure}} 
-         for granular control over data partitions to service geo-distribution and data compliance guarantees.
+       \item Designed and implemented \href{https://github.com/cockroachdb/cockroach/pull/31413}
+      {\underline{load based splitting}} to replicate
+      and distribute ranges of data across nodes
+    \item Improved overall read/write throughput by over
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{60\%}}
+         and reduced end-to-end latency by over
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{45\%}}
+       \item Introduced
+         idempotency within transactions to allow
+         save-points and more efficient request replays
+       \item Added intra-transactional request
+           ordering in the MVCC layer to solve the 
+         \href{https://github.com/cockroachdb/cockroach/pull/33244}{\underline{Halloween
+             Problem}}
+       \item Improved the data placement
+         model for more granular of control geo-partitioning and data compliance
   \end{rSubsection}
 
   \begin{rSubsection}{Shopify}
@@ -66,14 +98,11 @@
 		     {Production Engineering Intern (Infrastructure)}
 		     {Ottawa, ON}
     \item Led multiple engineering initiatives outlining measures to improve
-      observability standards across Shopify
-    \item Redesigned Shopify's incident response system
-      to support reporting mechanisms, introspection, and severity
-      escalations -- featured in SREcon and in Shopify's
+      observability across Shopify
+    \item Added instrumentation around reporting mechanisms, cluster health,
+      performance metrics and SLOs to the incident response system -- featured on the Shopify 
       \href{https://engineering.shopify.com/blogs/engineering/implementing-chatops-into-our-incident-management-procedure}
       {\underline{engineering blog}}
-    \item Built instrumentation around cluster/service health, to track 
-      SLOs, uptime, throughput, and error rates
   \end{rSubsection}
 
   \begin{rSubsection}{NCR Corporation}
@@ -96,7 +125,7 @@
 	  {May -- Aug '18}
     {Undergraduate Researcher (Prof. Grant Weddell)}
 	  {Waterloo, ON}
-    \item Researching main-memory databases that use dynamic
+    \item Researched main-memory databases that use dynamic
       code-generation as part of its execution model
   \end{rSubsection}
 \end{rSection}
@@ -106,35 +135,25 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Projects}
   
-  \begin{rSubsection}{raft}
-	  {\em {\href{http://github.com/ridwanmsharif/raft}
-		    {git.io/v59cj}}}
-	  {}
-
-    \item Implemented Raft, a fault tolerant and performant distributed
+  \begin{rProjectSection}
+    \item \textbf {raft} -- Implemented a fault tolerant and performant distributed
       consensus algorithm resilient to lossy networks, network partitions and
       node failures -- based on Diego Ongaro's
       \href{https://raft.github.io/raft.pdf}{\underline{thesis paper}}
-      
-  \end{rSubsection}
+    \item \textbf {mqueue} -- Constructed an in-memory Kafka-esque message broker in Go 
+      over an HTTP API
+  \end{rProjectSection}
 
-  \begin{rSubsection}{mqueue}
-	  {\em {\href{http://github.com/ridwanmsharif/mqueue}
-		    {git.io/vMKXe}}}
-	  {}
-
-    \item Constructed an in-memory Kafka-esque message broker in Go over an HTTP API
-  \end{rSubsection}
-
-  \begin{rMinisection}
-    \item {\em Other notable projects:}
+  \begin{rBlurbSection}
+    \item {Other notable projects:}
       \href{https://github.com/ridwanmsharif/lispy}{\textbf{lispy}},
       \href{https://github.com/ridwanmsharif/cache}{\textbf{gcache}},
       \href{https://github.com/ridwanmsharif/goworkerpool}{\textbf{go-workerpool}},
       \href{https://github.com/ridwanmsharif/prsa}{\textbf{pRSA}},
       \href{https://github.com/ridwanmsharif/fzysearch}{\textbf{fzysearch}},
       \href{https://github.com/ridwanmsharif/airport}{\textbf{airport}}
-  \end{rMinisection}
+  \end{rBlurbSection} 
+ 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------

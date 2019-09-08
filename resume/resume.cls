@@ -103,7 +103,27 @@
   \itemsep -0.5em \vspace{-0.0em}
 }{
   \end{list}
+  \vspace{0.2em}
+}
+
+
+\newenvironment{rProjectSection}[0]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Project (bold)                        URL (emphasis)   %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \vspace{0.5em}
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  }{
+  \end{list}
+}
+
+\newenvironment{rBlurbSection}[0]{
+  \begin{list}{}{\leftmargin=0.0em}
+  \itemsep -0.5em \vspace{-0.0em}
+  }{
+  \end{list}
+  \vspace{0.1em}
 }
 
 %----------------------------------------------------------------------------------------
@@ -122,10 +142,10 @@
   }\smallskip
   % \cdot used for bullets, items indented
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
-  \itemsep -0.5em \vspace{-0.5em}
+  \itemsep -0.5em \vspace{-0.7em}
 }{
   \end{list}
-  \vspace{0.5em}
+  \vspace{0.1em}
 }
 
 \def\namesize{\LARGE}
