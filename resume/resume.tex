@@ -4,7 +4,7 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.6in,top=0.5in,right=0.6in,bottom=0.5in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -29,8 +29,7 @@
   \vspace {0.2em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
     \itemsep -0.5em \vspace{-0.3em}
-    \item Experienced with Go, C, C++, Ruby, Python, Lisp; Rails, SQL, Docker, Redis,
-      Memcached and gRPC
+    \item Experienced with Go, C, C++, Ruby, Python, Lisp; Rails, SQL, Docker, and gRPC
     \item Interested in distributed systems, databases, infrastructure,
       performance and systems design
   \end{list}
@@ -79,15 +78,14 @@
       {\underline{load based splitting}} to replicate
       and distribute ranges of data across nodes
     \item Improved overall read/write throughput by over
-         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{60\%}}
+         \setul{4pt}{.4pt}
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\ul{60\%}}
          and reduced end-to-end latency by over
-         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\underline{45\%}}
-       \item Introduced
-         idempotency within transactions to allow
-         save-points and more efficient request replays
-       \item Added intra-transactional request
-           ordering in the MVCC layer to solve the 
-         \href{https://github.com/cockroachdb/cockroach/pull/33244}{\underline{Halloween
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\ul{45\%}}
+       \item Added transactional request
+           ordering, savepoints and idempotency to solve the 
+         \setul{4pt}{.4pt}
+         \href{https://github.com/cockroachdb/cockroach/pull/33244}{\ul{Halloween
              Problem}}
        \item Improved the data placement
          model for more granular of control geo-partitioning and data compliance
