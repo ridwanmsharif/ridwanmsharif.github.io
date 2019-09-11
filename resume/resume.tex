@@ -29,8 +29,8 @@
   \vspace {0.2em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
     \itemsep -0.5em \vspace{-0.3em}
-    \item Experienced with Go, C, C++, Ruby, Python, Lisp; Rails, SQL, Docker, and gRPC
-    \item Interested in distributed systems, databases, infrastructure,
+    \item Experienced with Go, C, C++, Ruby, Python, Lisp, SQL; Rails, Docker, and gRPC
+    \item Interested in distributed systems, databases, infrastructure, backend,
       performance and systems design
   \end{list}
   \vspace{0.1em}
@@ -63,11 +63,11 @@
        \item Implemented
          \href{https://github.com/cockroachdb/cockroach/pull/39668}{\ul{index-skip-scans}}
          to improve index scan performance by an order of magnitude
+       \item Leveraged check constraints to create rules that plan
+         \href{https://github.com/cockroachdb/cockroach/pull/38963}{\underline{partition look-ups}}
+         instead of full table scans
        \item Expanded the Cockroach SQL suite to include multi-table mutations
          and ordered aggregations
-       \item Added tranformations that plan 
-         \href{https://github.com/cockroachdb/cockroach/pull/38963}{\underline{partition look-ups}}
-         over table scans by leveraging check constraints
   \end{rSubsection}
 
   \begin{rSubsection}{Cockroach Labs}
@@ -134,11 +134,11 @@
 \begin{rSection}{Projects}
   
   \begin{rProjectSection}
-    \item \textbf {raft} -- Implemented a fault tolerant and performant distributed
+    \item \textbf {raft} {\textbf{---}} Implemented a fault tolerant and performant distributed
       consensus algorithm resilient to lossy networks, network partitions and
-      node failures -- based on Diego Ongaro's
+      node failures {\textbf{---}} based on Diego Ongaro's
       \href{https://raft.github.io/raft.pdf}{\underline{thesis paper}}
-    \item \textbf {mqueue} -- Constructed an in-memory Kafka-esque message broker in Go 
+    \item \textbf {mqueue} {\textbf{---}} Constructed an in-memory Kafka-esque message broker in Go
       over an HTTP API
   \end{rProjectSection}
 
