@@ -4,7 +4,7 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.4in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -25,90 +25,120 @@
 %	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Skills}
+\begin{rSection}{Summary}
   \vspace {0.2em}
   \begin{list}{$\cdot$}{\leftmargin=0.5em}
     \itemsep -0.5em \vspace{-0.3em}
-    \item Experienced with Go, C, C++, Ruby, Python, Lisp, SQL; Rails, Docker, and gRPC
-    \item Interested in distributed systems, databases, infrastructure, backend,
-      performance and systems design
+    \item Experienced with distributed systems, databases, operating systems,
+      infra, performance and backend
+    \item Proficient in Go, C, C++, Ruby, Python, Lisp, Java, SQL; Rails, Docker,
+      and gRPC
   \end{list}
   \vspace{0.1em}
 \end{rSection}
-
 
 %----------------------------------------------------------------------------------------
 %	EMPLOYMENT SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
-  \begin{rSubsection}{Cockroach Labs}
-    {May -- Aug '19}
-         {Backend Engineering Intern (SQL Optimizer)}
+  \begin{rWorkSection}{Google}
+		     {Sunnyvale, CA (Remote)}
+		     {Backend Engineering Intern}
+		     {May -- Present}
+    {
+      \item Working on expanding the gVisor kernel by supporting Linux
+        compatible sandboxed FUSE filesystems 
+      \item Designed and implemented the
+        FUSE protocol, device driver, kernel module and filesystem syscalls
+    }
+  \end{rWorkSection}
+  \begin{rWorkSection}{Postmates}
+		     {San Francisco, CA}
+		     {Platform Engineering Intern (Delivery as a Service)}
+		     {Jan -- Apr '18}
+    {
+      \item Built the DaaS invoicing and
+        billing system, reducing unrecoverable debt by \textbf{\$50,000+} annually
+      \item Architected the debt collection service by integrating with
+        BigQuery, GCS, Square, Shopify, and Stripe
+    }
+  \end{rWorkSection}
+  \begin{rDualWorkSection}{Cockroach Labs}
          {New York, NY}
+         {Backend Engineering Intern (SQL Optimizer)}
+         {May -- Aug '19}
+    {
        \item Worked on query compilation, transformation and
          optimization of joins, limits, indexes and more
-       \item Incorporated 
+       \item Added support for  
+         \href{https://github.com/cockroachdb/cockroach/pull/38452}{\ul{multi-table
+           mutations}}, 
+         \href{https://github.com/cockroachdb/cockroach/pull/38452}{\underline{ordered
+           aggregations}}, 
          \href{https://github.com/cockroachdb/cockroach/pull/38452}{\underline{segmented
-             sort}}
-         and 
-         \href{https://github.com/cockroachdb/cockroach/pull/38285}{\underline{look-up}}
-             joins into the optimizer
-         to improve query performance
+             sort}} and 
+         \href{https://github.com/cockroachdb/cockroach/pull/38285}{\underline{look-up
+           joins}}
        \item Implemented
          \href{https://github.com/cockroachdb/cockroach/pull/39668}{\ul{index-skip-scans}}
          to improve index scan performance by an order of magnitude
-       \item Leveraged check constraints to create rules that plan
-         \href{https://github.com/cockroachdb/cockroach/pull/38963}{\underline{partition}}
-         look-ups instead of full table scans
-       \item Expanded the Cockroach SQL suite to include multi-table mutations
-         and ordered aggregations
-  \end{rSubsection}
-
-  \begin{rSubsection}{Cockroach Labs}
+    }
+    {Backend Engineering Intern (Distributed SQL)}
     {Sep -- Dec '18}
-         {Backend Engineering Intern (Storage/Performance)}
-         {New York, NY}
+    {
        \item Designed and implemented \href{https://github.com/cockroachdb/cockroach/pull/31413}
       {\underline{load based splitting}} to replicate
       and distribute ranges of data across nodes
     \item Improved overall read/write throughput by over
          \setul{4pt}{.4pt}
-         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\ul{60\%}}
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\textbf{\ul{60\%}}}
          and reduced end-to-end latency by over
-         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\ul{45\%}}
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\textbf{\ul{45\%}}}
        \item Added transactional request
            ordering, savepoints and idempotency to solve the 
          \setul{4pt}{.4pt}
          \href{https://github.com/cockroachdb/cockroach/pull/33244}{\ul{Halloween
              Problem}}
-       \item Improved the data placement
-         model for more granular of control geo-partitioning and data compliance
-  \end{rSubsection}
+    }
+  \end{rDualWorkSection}
 
-  \begin{rSubsection}{Shopify}
-		     {Jan -- Apr '18}
-		     {Production Engineering Intern (Infrastructure)}
+  \begin{rWorkSection}{Shopify}
 		     {Ottawa, ON}
-    \item Led multiple engineering initiatives outlining measures to improve
-      observability across Shopify
-    \item Added instrumentation around reporting mechanisms, cluster health,
-      performance metrics and SLOs to the incident response system -- featured on the Shopify 
-      \href{https://engineering.shopify.com/blogs/engineering/implementing-chatops-into-our-incident-management-procedure}
-      {\underline{engineering blog}}
-  \end{rSubsection}
+		     {Production Engineering Intern (Infrastructure)}
+		     {Jan -- Apr '18}
+    {
+      \item Led multiple engineering initiatives outlining measures to improve
+        observability across Shopify
+      \item Built incident report and cluster health tooling that featured on the Shopify 
+        \href{https://engineering.shopify.com/blogs/engineering/implementing-chatops-into-our-incident-management-procedure}
+        {\underline{engineering blog}}
+    }
+  \end{rWorkSection}
 
-  \begin{rSubsection}{NCR Corporation}
-		     {May -- Aug '17}
-		     {System Software Engineering Intern (Infrastructure)}
+  \begin{rWorkSection}{NCR Corporation}
 		     {Waterloo, ON}
-    \item Designed a NIST compliant password manager to manage private
-      credentials for multiple teams
-    \item Used throughout the infrastructure division across multiple
-      teams, saving {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}18,000 USD
-      annually
-  \end{rSubsection}
+		     {System Software Engineering Intern (Infrastructure)}
+		     {May -- Aug '17}
+    {
+      \item Designed a NIST compliant password manager used by multiple teams
+        saving \textbf{\$18,000+}
+        annually
+    }
+  \end{rWorkSection}
 \end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+  \begin{rEducationSection}{University of Waterloo}
+		     {Sept '16 -- Apr '21 \em (expected)}
+		     {Bachelors of Computer Science, Honours (Faculty of Mathematics)}
+  \end{rEducationSection}
+\end{rSection} 
+
 
 %----------------------------------------------------------------------------------------
 %	RESEARCH SECTION
@@ -129,9 +159,8 @@
 \begin{rSection}{Projects}
   
   \begin{rProjectSection}
-    \item \textbf {raft} {\textbf{--}} Implemented a fault tolerant and performant distributed
-      consensus algorithm resilient to lossy networks, network partitions and
-      node failures; based on Diego Ongaro's
+    \item \textbf {raft} {\textbf{--}} A performant distributed
+      consensus algorithm; based on Diego Ongaro's
       \href{https://raft.github.io/raft.pdf}{\underline{thesis paper}}
     \item \textbf {mqueue} {\textbf{--}} Constructed an in-memory Kafka-esque message broker in Go
       over an HTTP API
@@ -148,19 +177,5 @@
   \end{rBlurbSection} 
  
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Education}
-  \begin{rSubsection}{University of Waterloo}
-		     {Sept '16 -- Apr '21 \em (expected)}
-		     {Bachelors of Computer Science, Honours}
-		     {}
-    \item UW Robotics Club, Hack the North (2017, 2016), President's Scholarship
-      ($95^{th}$ percentile)
-  \end{rSubsection}
-\end{rSection} 
 
 \end{document}

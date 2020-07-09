@@ -96,6 +96,7 @@
   \item[]
 }{
   \end{list}
+  \vspace{-0.1em}
 }
 
 \newenvironment{rMinisection}[0]{
@@ -103,7 +104,7 @@
   \itemsep -0.5em \vspace{-0.0em}
 }{
   \end{list}
-  \vspace{0.2em}
+  \vspace{-0.1em}
 }
 
 
@@ -116,6 +117,7 @@
   \itemsep -0.5em \vspace{-0.5em}
   }{
   \end{list}
+  \vspace{-0.1em}
 }
 
 \newenvironment{rBlurbSection}[0]{
@@ -123,7 +125,7 @@
   \itemsep -0.5em \vspace{-0.0em}
   }{
   \end{list}
-  \vspace{0.1em}
+  \vspace{-0.1em}
 }
 
 %----------------------------------------------------------------------------------------
@@ -145,7 +147,58 @@
   \itemsep -0.5em \vspace{-0.7em}
 }{
   \end{list}
-  \vspace{0.1em}
+  \vspace{-0.1em}
+}
+
+\newenvironment{rDualWorkSection}[8]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Employer (bold)                 Location (emphasis)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {\em #2}
+  \\
+  {\em #3}                 \hfill                  { #4}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  {#5}
+  \end{list}
+  {\em #6}                 \hfill                  { #7}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  {#8}
+  \end{list}
+  \vspace{-0.1em}
+}
+
+\newenvironment{rEducationSection}[3]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    School name (bold)                  Dates (regular)    %%
+  %%    Title (emphasis)                      GPA (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {#2} \\
+  {\em #3}
+  \smallskip
+  \vspace{-0.1em}
+}
+
+\newenvironment{rWorkSection}[5]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Employer (bold)                 Location (emphasis)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {\em #2}
+  \ifthenelse{\equal{#3}{}}{}{
+  \\
+  {\em #3}                 \hfill                  { #4}
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  {#5}
+  \end{list}
+  \vspace{-0.1em}
 }
 
 \def\namesize{\LARGE}
