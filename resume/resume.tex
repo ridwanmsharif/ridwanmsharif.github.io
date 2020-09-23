@@ -4,7 +4,7 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.4in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.4in,right=0.6in,bottom=0.4in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -47,10 +47,10 @@
 		     {Backend Engineering Intern (gVisor)}
 		     {May -- Present}
     {
-      \item Working on expanding the gVisor kernel by supporting Linux
+      \item Worked on expanding the gVisor kernel by supporting Linux
         compatible sandboxed FUSE filesystems 
-      \item Designed and implemented the
-        FUSE protocol, device driver, kernel module and filesystem syscalls
+      \item Built
+        the FUSE kernel module, device drivers, filesystem syscalls and the FUSE protocol in gVisor
     }
   \end{rWorkSection}
   \begin{rWorkSection}{Postmates}
@@ -59,9 +59,9 @@
 		     {Jan -- Apr '18}
     {
       \item Built the DaaS invoicing and
-        billing system, reducing unrecoverable debt by \textbf{\$50,000+} annually
+        billing system, reducing unrecoverable debt by \textbf{\$50,000\texttt{+}} annually
       \item Architected the debt collection service by integrating with
-        BigQuery, GCS, Square, Shopify, and Stripe
+        BigQuery, GCS, Square, Shopify, Stripe
     }
   \end{rWorkSection}
   \begin{rDualWorkSection}{Cockroach Labs}
@@ -93,8 +93,9 @@
     \item Improved overall read/write throughput by over
          \setul{4pt}{.4pt}
          \href{https://github.com/cockroachdb/cockroach/issues/31819}{\textbf{\ul{60\%}}}
-         and reduced end-to-end latency by over
-         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\textbf{\ul{45\%}}}
+         and
+         \href{https://github.com/cockroachdb/cockroach/issues/31819}{\textbf{\ul{halved}}}
+         end-to-end latency
        \item Added transactional request
            ordering, savepoints and idempotency to solve the 
          \setul{4pt}{.4pt}
@@ -110,7 +111,7 @@
     {
       \item Led multiple engineering initiatives outlining measures to improve
         observability across Shopify
-      \item Built incident report and cluster health tooling that featured on the Shopify 
+      \item Built incident report and cluster health tooling that was featured on the Shopify 
         \href{https://engineering.shopify.com/blogs/engineering/implementing-chatops-into-our-incident-management-procedure}
         {\underline{engineering blog}}
     }
@@ -122,7 +123,7 @@
 		     {May -- Aug '17}
     {
       \item Designed a NIST compliant password manager used by multiple teams
-        saving \textbf{\$18,000+}
+        saving \textbf{\$18,000\texttt{+}}
         annually
     }
   \end{rWorkSection}
