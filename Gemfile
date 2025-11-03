@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-ruby '2.3.3'
+ruby '3.1.2'
 
 group :jekyll_plugins do
-  gem 'github-pages', '~> 106'
+  gem 'github-pages'
 end
 
 group :development, :test do
