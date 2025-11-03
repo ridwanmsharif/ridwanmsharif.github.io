@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2025.11.3)  3 NOV 2025 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2025.11.3)  3 NOV 2025 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,7 +364,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 32.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 65.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 76.
 
 
 [1
@@ -379,7 +379,7 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  9969 strings out of 473190
  152364 string characters out of 5718449
- 571310 words of memory out of 5000000
+ 571304 words of memory out of 5000000
  33112 multiletter control sequences out of 15000+600000
  568330 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -391,10 +391,10 @@ r/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfxc1728.pfb>
-Output written on resume.pdf (1 page, 135801 bytes).
+Output written on resume.pdf (1 page, 136669 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
