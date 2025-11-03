@@ -5,8 +5,13 @@
 @charset "utf-8";
 
 @import "lib/normalize";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$body-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$primary-color: #2F4F4F; // Dark Slate Gray
+$secondary-color: #333;
+$light-gray: #999;
+$background-color: #fdfdfd;
 
 @mixin color-transition($duration-period) {
   -webkit-transition: color $duration-period ease-in;
@@ -14,17 +19,33 @@ $body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, san
   -o-transition:      color $duration-period ease-in;
   -ms-transition:     color $duration-period ease-in;
   transition:         color $duration-period ease-in;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: $primary-color; }
 }
 
 body {
-  color: #333;
+  background-color: $background-color;
+  color: $secondary-color;
   font-family: $body-font;
-  line-height: 1;
+  line-height: 1.6;
+  text-transform: lowercase;
 }
 
 a {
-  color: #307EA9;
+  color: $primary-color;
   text-decoration: none;
 }
 
@@ -34,37 +55,95 @@ ul {
 }
 
 header {
-  margin: 15% 0 8%;
+  margin: 10% 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  h1 {
-    font-weight: 300;
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px; /* Increased max-width */
+}
 
+.name-container {
+  width: 280px; /* Increased width */
+  text-align: right;
+  margin-right: 1em;
+}
+
+.bio-container {
+  width: 600px; /* Increased width */
+  text-align: left;
+}
+
+.name {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 1s steps(13, end) forwards, blink-caret .3s step-end 1 forwards; /* Faster animation */
+  border-right: .15em solid $primary-color;
+  font-weight: 400;
+  font-size: 2.5em;
+
+  .last-name {
+    margin-left: 0.25em;
     b {
-      font-weight: bold;
+      font-weight: 700;
+      color: $primary-color;
     }
   }
+}
 
-  p {
-    color: #646464;
-    font-size: 87.5%;
-    padding-bottom: 14px;
+.bio {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.4;
+  text-align: left;
+
+  span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: .15em solid transparent;
   }
 
-  ul {
+  b {
+    color: $primary-color;
+  }
+}
 
-    li {
-      display: inline;
-      padding: 0 15px;
+.line-1 {
+  animation: typewriter 1s steps(15, end) 1.5s forwards, blink-caret .3s step-end 4 1.5s forwards; /* Faster animation and reduced delay */
+}
+.line-2 {
+  animation: typewriter 1s steps(55, end) 2.5s forwards, blink-caret .3s step-end 4 2.5s forwards; /* Faster animation and reduced delay */
+}
+.line-3 {
+  animation: typewriter 1s steps(32, end) 3.5s forwards, blink-caret .3s step-end 4 3.5s forwards; /* Faster animation and reduced delay */
+}
 
-      a {
+.social-links {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 4.5s forwards; /* Reduced delay */
+  margin-top: 2em;
+
+  li {
+    display: inline;
+    padding: 0 12px;
+
+    a {
+      @include color-transition(0.25s);
+      color: $primary-color;
+
+      &:hover {
         @include color-transition(0.25s);
-        color: #BBB;
-
-        &:hover {
-          @include color-transition(0.25s);
-          color: #307EA9;
-        }
+        color: $light-gray;
       }
     }
   }
@@ -73,5 +152,5 @@ header {
 .container {
   margin: auto;
   width: 90%;
-  max-width: 650px;
+  max-width: 800px;
 }
