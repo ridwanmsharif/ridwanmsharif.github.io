@@ -1,6 +1,6 @@
 serve: resume
 	@echo "==> Starting Jekyll server..."
-	@script/server
+	@bundle exec jekyll serve
 
 resume:
 	@echo "==> Building resume..."

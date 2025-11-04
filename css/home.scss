@@ -149,8 +149,12 @@ header {
   }
 }
 
-.container {
-  margin: auto;
-  width: 90%;
-  max-width: 800px;
+.be-social {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .be-social {
+    display: block;
+  }
 }
