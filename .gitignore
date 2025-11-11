@@ -1,0 +1,12 @@
+# Ignore bundler cache.
+/vendor/bundle/
+vendor/
+
+# Ignore other files
+.bundle/
+_site/
+.sass-cache/
+*.gem
+*.rbc
+*.swp
+.DS_Store

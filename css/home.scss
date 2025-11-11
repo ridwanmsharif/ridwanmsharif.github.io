@@ -27,8 +27,8 @@ $background-color: #fdfdfd;
 }
 
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+  from { max-width: 0; }
+  to { max-width: 100%; }
 }
 
 @keyframes blink-caret {
@@ -55,33 +55,33 @@ ul {
 }
 
 header {
-  margin: 10% 0;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 .main-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 900px; /* Increased max-width */
+  justify-content: center; /* Ensure main-content itself is centered */
+  width: 100%; /* Allow it to take full width for centering */
+  max-width: 900px; /* Keep a max-width for readability */
+  gap: 2em; /* Spacing between name and bio */
 }
 
 .name-container {
-  width: 280px; /* Increased width */
-  text-align: right;
-  margin-right: 1em;
+  flex: 1; /* Equal width */
 }
 
 .bio-container {
-  width: 600px; /* Increased width */
-  text-align: left;
+  flex: 1; /* Equal width */
 }
 
 .name {
+  text-align: center; /* Center the name text */
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -89,6 +89,7 @@ header {
   border-right: .15em solid $primary-color;
   font-weight: 400;
   font-size: 2.5em;
+  max-width: 0;
 
   .last-name {
     margin-left: 0.25em;
@@ -100,16 +101,16 @@ header {
 }
 
 .bio {
+  text-align: center; /* Center the bio text */
   color: #555;
   font-size: 1.1em;
   line-height: 1.4;
-  text-align: left;
 
   span {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    width: 0;
+    max-width: 0;
     border-right: .15em solid transparent;
   }
 
@@ -120,18 +121,25 @@ header {
 
 .line-1 {
   animation: typewriter 1s steps(15, end) 1.5s forwards, blink-caret .3s step-end 4 1.5s forwards; /* Faster animation and reduced delay */
+  max-width: 15em;
 }
 .line-2 {
-  animation: typewriter 1s steps(55, end) 2.5s forwards, blink-caret .3s step-end 4 2.5s forwards; /* Faster animation and reduced delay */
+  animation: typewriter 1s steps(28, end) 2.5s forwards, blink-caret .3s step-end 4 2.5s forwards; /* Faster animation and reduced delay */
+  max-width: 28em;
 }
 .line-3 {
-  animation: typewriter 1s steps(32, end) 3.5s forwards, blink-caret .3s step-end 4 3.5s forwards; /* Faster animation and reduced delay */
+  animation: typewriter 1s steps(45, end) 3.5s forwards, blink-caret .3s step-end 4 3.5s forwards; /* Faster animation and reduced delay */
+  max-width: 45em;
+}
+.line-4 {
+  animation: typewriter 1s steps(32, end) 4.5s forwards, blink-caret .3s step-end 4 4.5s forwards; /* Faster animation and reduced delay */
+  max-width: 32em;
 }
 
 .social-links {
   opacity: 0;
-  animation: fadeIn 1s ease-in-out 4.5s forwards; /* Reduced delay */
-  margin-top: 2em;
+  animation: fadeIn 1s ease-in-out 5.5s forwards; /* Reduced delay */
+  margin-top: 4em; /* Increased margin-top for more separation */
 
   li {
     display: inline;
@@ -156,5 +164,25 @@ header {
 @media (min-width: 768px) {
   .be-social {
     display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .name-container,
+  .bio-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .name-container {
+    margin-right: 0;
+  }
+
+  .bio {
+    text-align: center;
   }
 }
