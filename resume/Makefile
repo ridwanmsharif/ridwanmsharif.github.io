@@ -1,5 +1,5 @@
 all :
-	pdflatex resume.tex
+	/opt/homebrew/bin/tectonic resume.tex
 
 clean :
-	rm *.log *.out *.aux
+	rm -f *.log *.out *.aux
