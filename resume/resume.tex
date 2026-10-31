@@ -4,7 +4,7 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.6in,top=0.35in,right=0.6in,bottom=0.35in]{geometry} % Document margins
+\usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -26,9 +26,9 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Summary}
-  \vspace {0.2em}
+  \vspace {0.1em}
   Experienced with distributed systems, databases, operating systems, infrastructure, performance, and backend engineering; interested in working at high impact teams building scalable tech
-  \vspace{0.1em}
+  \vspace{0.05em}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -48,13 +48,14 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
-  \begin{rWorkSection}{Cursor (Anysphere)}
+  \begin{rWorkSection}{Cursor / SpaceXAI}
 		     {Canada (Remote)}
-		     {Member of Technical Staff (Computer Systems Analyst)}
+		     {Member of Technical Staff}
 		     {June '26 -- Present}
     {
-      \item Designing and building infrastructure to orchestrate reinforcement learning environments at scale
-      \item Working with ML researchers and GPU infrastructure to improve training throughput and reliability
+      \item Led post-training harness, sandboxing, and scaling infrastructure for Grok 4.5+ model development
+      \item Architected vendor data pipeline for reliable RL training data ingestion and validation at scale
+      \item Developed data quality and evals infrastructure to monitor and improve training signal quality
     }
   \end{rWorkSection}
   \begin{rWorkSection}{Google}
